@@ -182,7 +182,12 @@ void setPlayersNames(const int NumOfPlayers)
     string names;
     for(int i = 0; i < NumOfPlayers; i++)
     {
+        if(NumOfPlayers == 1) {
+            cout<<"          Enter your name... ";
+        }
+        else {
         cout<<"          Enter Player "<<(i + 1)<<" name... ";
+        }
         getline(cin>>ws, names);
         isAlphabet(names);
         PlayersNames.push_back(names);
